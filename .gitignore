@@ -3,7 +3,6 @@
 *.log
 *.pyc
 *.swp
-error.txt
 .DS_Store
 .atom/
 .buildlog/
@@ -32,17 +31,6 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
-android/
-ios/
-linux/
-macos/
-test/
-web/
-windows/
-.metadata
-analysis_options.yaml
-pubspec.lock
-README.md
 
 # Symbolication related
 app.*.symbols
