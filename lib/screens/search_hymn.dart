@@ -1,13 +1,18 @@
-import 'package:discipleship_hymnary/screens/home.dart';
-
+import 'widget.dart';
 import 'models/models.dart';
 import 'package:flutter/material.dart';
 
 class SearchHymnary extends SearchDelegate<DiscipleshipHymnaryModel> {
   final List<DiscipleshipHymnaryModel> allHymns;
   final List<DiscipleshipHymnaryModel> allHymnsSuggestion;
+  final double _fontSize = 14.0;
+  final Function? updateHymn;
 
-  SearchHymnary({required this.allHymns, required this.allHymnsSuggestion});
+  SearchHymnary({
+    required this.allHymns,
+    required this.allHymnsSuggestion,
+    required this.updateHymn,
+  });
 
   @override
   List<Widget>? buildActions(BuildContext context) {
@@ -17,6 +22,7 @@ class SearchHymnary extends SearchDelegate<DiscipleshipHymnaryModel> {
         onPressed: () {
           query = "";
         },
+        tooltip: "Clear",
       )
     ];
   }
@@ -28,6 +34,7 @@ class SearchHymnary extends SearchDelegate<DiscipleshipHymnaryModel> {
       onPressed: () {
         Navigator.of(context).pop();
       },
+      tooltip: "Back",
     );
   }
 
@@ -48,7 +55,13 @@ class SearchHymnary extends SearchDelegate<DiscipleshipHymnaryModel> {
         final hymnSearch = hymnsIndex[index];
         return HymnCard(
           hymns: hymnSearch,
-          fontSize: 14,
+          fontSize: _fontSize,
+          onTap: (value) {
+            if (updateHymn != null) {
+              updateHymn!(value);
+            }
+          },
+          fromHome: false,
         );
       },
     );
@@ -70,7 +83,13 @@ class SearchHymnary extends SearchDelegate<DiscipleshipHymnaryModel> {
         final hymnSearch = hymnsSuggestion[index];
         return HymnCard(
           hymns: hymnSearch,
-          fontSize: 14,
+          fontSize: _fontSize,
+          onTap: (value) {
+            if (updateHymn != null) {
+              updateHymn!(value);
+            }
+          },
+          fromHome: false,
         );
       },
     );

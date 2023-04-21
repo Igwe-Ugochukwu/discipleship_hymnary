@@ -4,9 +4,7 @@ import 'models/models.dart';
 import 'package:flutter/material.dart';
 
 class PrefaceScreen extends StatefulWidget {
-
   const PrefaceScreen({super.key});
-
   @override
   State<PrefaceScreen> createState() => _PrefaceScreenState();
 }
@@ -24,7 +22,7 @@ class _PrefaceScreenState extends State<PrefaceScreen> {
   @override
   Widget build(BuildContext context) {    
     return Scaffold(
-      appBar: AppBar(
+      appBar: !Responsive.isDesktop(context) ? AppBar(
         toolbarHeight: _height,
         title: Row(
           children: [
@@ -50,8 +48,8 @@ class _PrefaceScreenState extends State<PrefaceScreen> {
         ),
         elevation: 0.0,
         centerTitle: false,
-      ),
-      drawer: const DiscipleshipSideBar(),
+      ) : null,
+      drawer: DiscipleshipSideBar(),
       body: FutureBuilder(
         future: readPrefaceData(context),
         builder: (context, data){
@@ -133,13 +131,16 @@ class _PrefaceScreenState extends State<PrefaceScreen> {
                         textAlign: TextAlign.center,
                       ),
                       for (var i in prefaceItems)
-                      Text(
-                        i.dedication,
-                        style: const TextStyle(
-                          fontSize: 15.0,
-                          fontWeight: FontWeight.w500,
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                        child: Text(
+                          i.dedication,
+                          style: const TextStyle(
+                            fontSize: 15.0,
+                            fontWeight: FontWeight.w500,
+                          ),
+                          textAlign: TextAlign.justify,
                         ),
-                        textAlign: TextAlign.justify,
                       ),
                       const SizedBox(height: 20),
                     ],

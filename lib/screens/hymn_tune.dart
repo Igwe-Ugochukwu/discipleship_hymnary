@@ -1,6 +1,6 @@
+import 'package:just_audio/just_audio.dart';
 import 'common/widget.dart';
 import 'package:flutter/material.dart';
-import 'package:assets_audio_player/assets_audio_player.dart';
 
 class HymnTune extends StatefulWidget {
   final String hymnMusicPath;
@@ -18,19 +18,32 @@ class _HymnTuneState extends State<HymnTune>
   bool showPlayButton = true;
   bool showPauseButton = false;
   double iconSize = 30.0;
-  AssetsAudioPlayer hymnTunePlayer = AssetsAudioPlayer();
+  AudioPlayer hymnTunePlayer = AudioPlayer();
 
   @override
   void initState() {
     super.initState();
     iconController = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 100));
-    hymnTunePlayer.open(Audio(widget.hymnMusicPath),
-        autoStart: false, showNotification: true);
+      vsync: this,
+      duration: const Duration(milliseconds: 100),
+    );
+    loadMusic();
+  }
+
+  void loadMusic() async {
+    if (mounted && widget.hymnMusicPath.isNotEmpty) {
+      await hymnTunePlayer
+          .setAudioSource(AudioSource.asset(widget.hymnMusicPath));
+    }
   }
 
   @override
   Widget build(BuildContext context) {
+    if (widget.hymnMusicPath.isNotEmpty) {
+      hymnTunePlayer.setAudioSource(AudioSource.asset(widget.hymnMusicPath));
+    } else {
+      hymnTunePlayer = AudioPlayer();
+    }
     return FloatingActionButton(
       onPressed: () => animateIcon(),
       elevation: 10,
@@ -46,22 +59,24 @@ class _HymnTuneState extends State<HymnTune>
     );
   }
 
-  void animateIcon() {
-    setState(() {
+  void animateIcon() async {
+    if (widget.hymnMusicPath.isNotEmpty) {
       isAnimated = !isAnimated;
       if (isAnimated) {
-        iconController.forward();
-        hymnTunePlayer.play();
+        await iconController.forward();
+        await hymnTunePlayer.play();
       } else {
-        iconController.reverse();
-        hymnTunePlayer.pause();
+        await iconController.reverse();
+        await hymnTunePlayer.stop();
       }
-    });
+      setState(() {});
+    }
   }
 
   @override
-  void dispose() {
-    hymnTunePlayer.dispose();
+  void dispose() async {
     super.dispose();
+    await hymnTunePlayer.dispose();
+    iconController.dispose();
   }
 }

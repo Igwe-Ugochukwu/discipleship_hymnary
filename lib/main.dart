@@ -1,7 +1,9 @@
 import 'screens/widget.dart';
 import 'screens/common/widget.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 
 void main(){
   runApp(const DiscipleshipHymnary());
@@ -29,6 +31,10 @@ class _DiscipleshipHymnaryState extends State<DiscipleshipHymnary>{
 
   @override
   Widget build(BuildContext context){
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(

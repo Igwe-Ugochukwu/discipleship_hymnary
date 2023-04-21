@@ -1,8 +1,8 @@
-import 'widget.dart';
 import 'common/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 import 'models/discipleship_hymnary_model.dart';
+import 'widget.dart';
 
 class HymnDialog extends StatelessWidget {
   final double _iconSize = 30.0;
@@ -15,55 +15,59 @@ class HymnDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: _height,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          focusColor: Styles.defaultWhiteColor,
-          tooltip: 'Back',
-          icon: Icon(
-            Icons.arrow_left,
-            size: _iconSize,
-          ),
-        ),
-        title: Row(
-          children: [
-            SizedBox(
-              width: MediaQuery.of(context).size.width * 0.6,
-              child: Text(
-                '${hymnaryModel.id.toString()}. ${hymnaryModel.title}',
-                style: const TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 16.0,
+      appBar: !Responsive.isDesktop(context)
+          ? AppBar(
+              toolbarHeight: _height,
+              automaticallyImplyLeading: false,
+              leading: IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                focusColor: Styles.defaultWhiteColor,
+                tooltip: 'Back',
+                icon: Icon(
+                  Icons.arrow_left,
+                  size: _iconSize,
                 ),
-                overflow: TextOverflow.ellipsis,
               ),
-            ),
-          ],
-        ),
-        elevation: 0.0,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.share),
-            onPressed: () {
-              _onShare(context);
-            },
-            iconSize: _iconSize,
-            tooltip: 'Share',
-          ),
-        ],
+              title: Row(
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.6,
+                    child: Text(
+                      '${hymnaryModel.id.toString()}. ${hymnaryModel.title}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 16.0,
+                      ),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                ],
+              ),
+              elevation: 0.0,
+              actions: [
+                IconButton(
+                  icon: const Icon(Icons.share),
+                  onPressed: () {
+                    _onShare(context);
+                  },
+                  iconSize: _iconSize,
+                  tooltip: 'Share',
+                ),
+              ],
+            )
+          : null,
+      floatingActionButton: HymnTune(
+        hymnMusicPath: hymnaryModel.hymnMusic,
       ),
-      floatingActionButton: HymnTune(hymnMusicPath: hymnaryModel.hymnMusic),
       body: SingleChildScrollView(
         child: Container(
           margin: const EdgeInsets.all(5.0),
-          padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
           child: Card(
             elevation: 10,
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(10, 40, 10, 40),
+              padding: const EdgeInsets.fromLTRB(7, 40, 7, 40),
               child: Column(
                 children: [
                   Row(
@@ -76,41 +80,43 @@ class HymnDialog extends StatelessWidget {
                           fontSize: 40.0,
                         ),
                       ),
-                      const SizedBox(width: 15),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.7,
-                            child: Text(
-                              hymnaryModel.title,
-                              style: const TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 15.0,
+                      const SizedBox(width: 10),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(
+                              width: MediaQuery.of(context).size.width * 0.7,
+                              child: Text(
+                                hymnaryModel.title,
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15.0,
+                                ),
+                                overflow: TextOverflow.ellipsis,
                               ),
-                              overflow: TextOverflow.ellipsis,
                             ),
-                          ),
-                          const SizedBox(height: 5),
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.7,
-                            child: Text(
-                              hymnaryModel.bibleText,
-                              style: const TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 11.0,
+                            const SizedBox(height: 5),
+                            SizedBox(
+                              width: MediaQuery.of(context).size.width * 0.7,
+                              child: Text(
+                                hymnaryModel.bibleText,
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 11.0,
+                                ),
+                                overflow: TextOverflow.ellipsis,
                               ),
-                              overflow: TextOverflow.ellipsis,
                             ),
-                          ),
-                          const SizedBox(height: 5),
-                          Text(
-                            hymnaryModel.key,
-                            style: const TextStyle(
-                              fontSize: 12.0,
+                            const SizedBox(height: 5),
+                            Text(
+                              hymnaryModel.key,
+                              style: const TextStyle(
+                                fontSize: 12.0,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ],
                   ),

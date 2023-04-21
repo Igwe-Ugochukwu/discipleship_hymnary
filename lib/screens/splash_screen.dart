@@ -16,7 +16,7 @@ class _DiscipleshipHymnarySplashScreenState extends State<DiscipleshipHymnarySpl
   _DiscipleshipHymnarySplashScreenState(){
     Timer(const Duration(seconds: 5), (){
       setState(() {
-        Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => const DiscipleshipHymnaryHome()), (route) => false);
+        Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => Responsive.isDesktop(context) ? const HomeScreenManager() : DiscipleshipHymnaryHome()), (route) => false);
       });
     });
     Timer(const Duration(milliseconds: 5), (){
@@ -45,26 +45,42 @@ class _DiscipleshipHymnarySplashScreenState extends State<DiscipleshipHymnarySpl
         opacity: _isInvisible? 1.0:0,
         duration: const Duration(milliseconds: 1200),
         child: Center(
-          child: Container(
-            height: 140.0,
-            width: 140.0,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Styles.defaultWhiteColor,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.3),
-                  blurRadius: 2.0,
-                  offset: const Offset(5.0, 3.0),
-                  spreadRadius: 2.0,
-                )
-              ]
-            ),
-            child: Center(
-              child: ClipOval(
-                child: Image.asset('assets/images/piano.jpeg', width: 100, height: 100,)
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                height: 140.0,
+                width: 140.0,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Styles.defaultWhiteColor,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.3),
+                      blurRadius: 2.0,
+                      offset: const Offset(5.0, 3.0),
+                      spreadRadius: 2.0,
+                    )
+                  ]
+                ),
+                child: Center(
+                  child: ClipOval(
+                    child: Image.asset('assets/images/piano.jpeg', width: 100, height: 100,)
+                  ),
+                ),
               ),
-            ),
+              const SizedBox(height: 25),
+              Text(
+                "Disciples'\nhymn book".toUpperCase(),
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Styles.defaultWhiteColor,
+                  decoration: TextDecoration.none,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ],
           ),
         ),
       ),
