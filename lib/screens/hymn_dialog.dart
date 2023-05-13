@@ -1,8 +1,8 @@
+//import 'widget.dart';
 import 'common/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 import 'models/discipleship_hymnary_model.dart';
-import 'widget.dart';
 
 class HymnDialog extends StatelessWidget {
   final double _iconSize = 30.0;
@@ -58,9 +58,12 @@ class HymnDialog extends StatelessWidget {
               ],
             )
           : null,
-      floatingActionButton: HymnTune(
-        hymnMusicPath: hymnaryModel.hymnMusic,
-      ),
+      //floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      /* floatingActionButton: Responsive.isDesktop(context) ? 
+        DesktopHymnRadialMenu(hymnaryModel: hymnaryModel,)
+       : HymnTune(
+          hymnMusicPath: hymnaryModel.hymnMusic,
+        ), */
       body: SingleChildScrollView(
         child: Container(
           margin: const EdgeInsets.all(5.0),

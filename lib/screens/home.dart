@@ -1,9 +1,8 @@
 // ignore_for_file: must_be_immutable
-
-import 'models/models.dart';
-import 'dart:convert';
 import 'widget.dart';
+import 'dart:convert';
 import 'common/widget.dart';
+import 'models/models.dart';
 import 'package:flutter/material.dart';
 
 class DiscipleshipHymnaryHome extends StatefulWidget {
@@ -109,12 +108,7 @@ class _DiscipleshipHymnaryHomeState extends State<DiscipleshipHymnaryHome> {
                     final hymns = hymnItems[index];
                     return selectedHymn == ""
                         ? Container()
-                        : HymnCard(
-                            hymns: hymns,
-                            fontSize: _fontSize,
-                            onTap: (value) {},
-                            fromHome: true,
-                          );
+                        : HymnCardMobile(hymns: hymns, fontSize: _fontSize);
                   });
             } else {
               return const Center(

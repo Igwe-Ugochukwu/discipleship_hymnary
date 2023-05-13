@@ -53,16 +53,7 @@ class SearchHymnary extends SearchDelegate<DiscipleshipHymnaryModel> {
       itemCount: hymnsIndex.length,
       itemBuilder: (context, index) {
         final hymnSearch = hymnsIndex[index];
-        return HymnCard(
-          hymns: hymnSearch,
-          fontSize: _fontSize,
-          onTap: (value) {
-            if (updateHymn != null) {
-              updateHymn!(value);
-            }
-          },
-          fromHome: false,
-        );
+        return HymnCardMobile(hymns: hymnSearch, fontSize: _fontSize);
       },
     );
   }
@@ -81,16 +72,7 @@ class SearchHymnary extends SearchDelegate<DiscipleshipHymnaryModel> {
       itemCount: hymnsSuggestion.length,
       itemBuilder: (context, index) {
         final hymnSearch = hymnsSuggestion[index];
-        return HymnCard(
-          hymns: hymnSearch,
-          fontSize: _fontSize,
-          onTap: (value) {
-            if (updateHymn != null) {
-              updateHymn!(value);
-            }
-          },
-          fromHome: false,
-        );
+        return HymnCardMobile(hymns: hymnSearch, fontSize: _fontSize);
       },
     );
   }

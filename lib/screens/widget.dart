@@ -7,3 +7,4 @@ export 'hymn_tune.dart';
 export 'hymn_card.dart';
 export 'screen_manager.dart';
 export 'search_hymn_desktop.dart';
+export 'hymn_card_mobile.dart';

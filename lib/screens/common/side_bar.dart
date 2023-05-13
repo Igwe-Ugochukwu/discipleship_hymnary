@@ -1,10 +1,10 @@
 // ignore_for_file: must_be_immutable
 
 import 'widget.dart';
+import 'package:discipleship_hymnary/screens/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:discipleship_hymnary/screens/widget.dart';
 
 class DiscipleshipSideBar extends StatefulWidget {
   Function? changeScreenSideBar;
@@ -99,7 +99,7 @@ class _DiscipleshipSideBarState extends State<DiscipleshipSideBar> {
                     : changePageController.jumpToPage(0);
               },
             ),
-            ListTile(
+            /* ListTile(
               leading: Icon(Icons.perm_device_information_outlined,
                   size: drawerIconSize, color: Styles.defaultBlueColor),
               title: Text(
@@ -110,7 +110,7 @@ class _DiscipleshipSideBarState extends State<DiscipleshipSideBar> {
               onTap: () {
                 aboutDialog(context);
               },
-            ),
+            ), */
             ListTile(
               leading: Icon(Icons.wb_sunny_outlined,
                   size: drawerIconSize, color: Styles.defaultBlueColor),
@@ -161,6 +161,24 @@ class _DiscipleshipSideBarState extends State<DiscipleshipSideBar> {
                 const CircleAvatar(
                   radius: 50.0,
                   backgroundImage: AssetImage("assets/images/piano.jpeg"),
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  "Disciple's Hymn Book",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  'Version: 1.0.0',
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 10),
                 const Text(
@@ -218,8 +236,10 @@ class _DiscipleshipSideBarState extends State<DiscipleshipSideBar> {
                 ),
                 ListTile(
                   onTap: () async {
-                    if (!await launchUrl(urlForEmail)) {
-                      throw Exception('Could not launch $urlForEmail');
+                    if (await canLaunchUrl(urlForEmail)) {
+                      await launchUrl(urlForEmail);
+                    } else {
+                      debugPrint('Cant;');
                     }
                   },
                   leading: Container(

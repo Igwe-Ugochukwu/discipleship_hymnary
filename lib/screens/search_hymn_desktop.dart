@@ -54,7 +54,7 @@ class SearchHymnaryDesktop extends SearchDelegate<DiscipleshipHymnaryModel> {
           fontSize: _fontSizeDesktop,
           hymns: desktopHymnSearch,
           onTap: (value) {},
-          fromHome: false,
+          fromHome: true,
         );
       },
     );
@@ -82,7 +82,7 @@ class SearchHymnaryDesktop extends SearchDelegate<DiscipleshipHymnaryModel> {
           fontSize: _fontSizeDesktop,
           onTap: (value) {},
           hymns: desktopHymnSearch,
-          fromHome: false,
+          fromHome: true,
         );
       },
     );

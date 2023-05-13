@@ -21,7 +21,6 @@ class _HomeScreenManagerState extends State<HomeScreenManager> {
   bool isDesktopSearch = false;
   final double _desktopFontSize = 14.0;
   List<DiscipleshipHymnaryModel>? desktopHymnFuture;
-
   int hymnIndex = 0;
 
   @override
@@ -89,7 +88,8 @@ class _HomeScreenManagerState extends State<HomeScreenManager> {
                         );
                       }
                     },
-                    tooltip: 'Search hymnary'),
+                  tooltip: 'Search hymnary'
+                ),
               ],
             )
           : null,
@@ -150,12 +150,9 @@ class _HomeScreenManagerState extends State<HomeScreenManager> {
   Future<List<DiscipleshipHymnaryModel>> desktopReadJsonData(
       BuildContext context) async {
     final desktopAssetBundle = DefaultAssetBundle.of(context);
-    final desktopData = await desktopAssetBundle
-        .loadString('assets/json/discipleship_hymnary.json');
+    final desktopData = await desktopAssetBundle.loadString('assets/json/discipleship_hymnary.json');
     final desktopList = json.decode(desktopData) as List<dynamic>;
-    return desktopList
-        .map((jsonItems) => DiscipleshipHymnaryModel.fromJson(jsonItems))
-        .toList();
+    return desktopList.map((jsonItems) => DiscipleshipHymnaryModel.fromJson(jsonItems)).toList();
   }
 
   @override

@@ -18,7 +18,6 @@ class HymnCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // allHymnaryScreens.add(HymnDialog(hymnaryModel: hymns));
     return GestureDetector(
       onTap: () {
         onTap(hymns.id);

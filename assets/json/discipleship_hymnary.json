@@ -3,7 +3,7 @@
     "id":1,
     "title":"PRECIOUS LORD, TAKE MY HAND",
     "meter":"6.6.9.D.",
-    "hymnMusic":"assets/audio/Are-you-washed-in-the-blood-Washed-in-the-blood.mp3",
+    "hymnMusic":"",
     "key":"",
     "text":"Thomas A. Dorsey",
     "music":"George N. Allen",
@@ -425,7 +425,7 @@
     "title":"GREAT IS THY FAITHFULNESS",
     "hymnTune":"FAITHFULNESS",
     "meter":"11.10.11.10. with Refrain",
-    "hymnMusic":"assets/audio/Great-is-thy-faithfulness-Faithfulness.mp3",
+    "hymnMusic":"",
     "text":"Thomas O. Chrisholm",
     "music":"Traditional Swedish Melody",
     "bibleText":"The Lords compassions are new every morning:\ngreat is your faithfulness. Lam. 3:22-23",
@@ -437,7 +437,7 @@
     "title":"ARE YOU WASHED IN THE BLOOD",
     "hymnTune":"WASHED IN THE BLOOD",
     "meter":"11.9.11.9. with Refrain",
-    "hymnMusic":"assets/audio/Are-you-washed-in-the-blood-Washed-in-the-blood.mp3",
+    "hymnMusic":"",
     "text":"Elisha A. Hoffman",
     "music":"Elisha A. Hoffman",
     "bibleText":"The blood of Jesus purifies us from all sin.\nI John 1:7",
@@ -461,7 +461,7 @@
 	"title":"THE OLD RUGGED CROSS",
 	"hymnTune":"OLD RUGGED CROSS",
 	"meter":"Irregular",
-	"hymnMusic":"assets/audio/the-old-rugged-cross.mp3",
+	"hymnMusic":"",
 	"text":"George Bennard",
 	"music":"George Bennard",
 	"bibleText":"Carrying his own cross, he went out to\nthe place of the Skull John 19:17",
@@ -509,7 +509,7 @@
 	"key":"KEY F",
 	"hymnTune":"NEAR THE CROSS",
 	"meter":"7.6.7.6.",
-	"hymnMusic":"assets/audio/Jesus-Keep-Me-Near-The-Cross-L.mp3",
+	"hymnMusic":"",
 	"text":"Fanny J. Crosby",
 	"music":"William H. Doane",
 	"bibleText":"May I never boast except in the cross of our\nLord Jesus Christ - Galatians 6:14",
@@ -549,7 +549,7 @@
 	"music":"Henry Baker",
 	"hymnTune":"QUEBEC",
 	"meter":"8.8.8.8. (LM)",
-	"hymnMusic":"assets/audio/Take-Up-Thy-Cross-The-Saviour-Said.mp3"
+	"hymnMusic":""
 	},
 	{
 	"id":47,
@@ -633,7 +633,7 @@
 	"music":"James Ellor",
 	"hymnTune":"DIADEM",
 	"meter":"8.6.8.6 (CM)",
-	"hymnMusic":"assets/audio/All-hail-the-power-of-Jesus-name.mp3"
+	"hymnMusic":""
 	},
 	{
 	"id":54,
@@ -645,7 +645,7 @@
 	"music":"Stuart K. Hine",
 	"hymnTune":"O STORE GUD",
 	"meter":"11.10.11.10.",
-	"hymnMusic":"assets/audio/O-Lord-My-God-How-Great-Thou-Art.mp3"
+	"hymnMusic":""
 	},
 	{
 	"id":55,
@@ -705,7 +705,7 @@
 	"music":"Robert Jackson",
 	"hymnTune":"TRENTHAM",
 	"meter":"6.6.8.6. (S.M.)",
-	"hymnMusic":"assets/audio/Breathe-on-me-Breath-of-God.mp3"
+	"hymnMusic":""
 	},
 	{
 	"id":60,
@@ -717,7 +717,7 @@
 	"music":"Virginia Harmony",
 	"hymnTune":"NEW BRITAIN",
 	"meter":"8.6.8.6. (C.M.)",
-	"hymnMusic":"assets/audio/Amazing-Grace.mp3"
+	"hymnMusic":""
 	},
 	{
 	"id":61,
@@ -729,7 +729,7 @@
 	"music":"Phoebe Palmer Knapp",
 	"hymnTune":"ASSURANCE",
 	"meter":"Irregular",
-	"hymnMusic":"assets/audio/Blessed-Assurance-Blessed-Assurance.mp3"
+	"hymnMusic":""
 	},
 	{
 	"id":62,
@@ -1041,7 +1041,7 @@
 	"music":"Thomas Campbell",
 	"hymnTune":"SA GINA",
 	"meter":"8.8.8.8.8.8.",
-	"hymnMusic":"assets/audio/And-can-it-be.mp3"
+	"hymnMusic":""
 	},
 	{
 	"id":88,
@@ -1065,7 +1065,7 @@
 	"music":"R. Redhead",
 	"hymnTune":"REAHEAD, 76",
 	"meter":"7.7.7.7.7.7.",
-	"hymnMusic":"assets/audio/Rock-of-ages.mp3"
+	"hymnMusic":""
 	},
 	{
 	"id":90,
@@ -1245,7 +1245,7 @@
 	"music":"A. H. Brown",
 	"hymnTune":"SAFFRON WARDEN",
 	"meter":"8.8.8.6.",
-	"hymnMusic":"assets/audio/Just-as-I-am-without-one-plea.mp3"
+	"hymnMusic":""
 	},
 	{
 	"id":105,
@@ -1689,7 +1689,7 @@
 	"music":"Robert Simpson",
 	"hymnTune":"BALERMA.",
 	"meter":"C.M.",
-	"hymnMusic":"assets/audio/O-For-A-Closer-Walk-With-God.mp3"
+	"hymnMusic":""
 	},
 	{
 	"id":142,
@@ -1833,7 +1833,7 @@
 	"music":"Attr. Johan Michael Hayon",
 	"hymnTune":"LYONS",
 	"meter":"10.10.11.11",
-	"hymnMusic":"assets/audio/O-worship-the-king.mp3"
+	"hymnMusic":""
 	},
 	{
 	"id":154,
@@ -1917,7 +1917,7 @@
 	"music":"George J. Webb",
 	"hymnTune":"WEBB",
 	"meter":"7.6.7.6.D.",
-	"hymnMusic":"assets/audio/Stand-Up-Stand-Up-For-Jesus.mp3"
+	"hymnMusic":""
 	},
 	{
 	"id":161,
@@ -2049,7 +2049,7 @@
 	"music":"Arthur S. Sullivan",
 	"hymnTune":"ST. GERTRUDE",
 	"meter":"6.5.6.5.D. with Refrain",
-	"hymnMusic":"assets/audio/Onward-Christian-Soldiers.mp3"
+	"hymnMusic":""
 	},
 	{
 	"id":172,
@@ -2083,7 +2083,7 @@
 	"verses":"1. Guide me, o Thou Great Jehovah!\nPilgrim thro' this barren land;\nI am weak, but Thou art mighty,\nHold me with Thy pow'rful hand;\nBread of heaven! Bread of heaven!\nFeed me now and evermore\nBread of heaven, bread of heaven\nFeed me now and evermore\n\n2. Open now Thou the crystal fountain\nWhence the healing stream doth flow:\nLet the fire and cloudy pillar\nLead me all my journey through:\nStrong Deliverer! Strong Deliverer!\nBe Thou still my strength and shield\nStrong Deliverer! Strong Deliverer!\nBe Thou still my strength and shield\n\n3. When I tread the verge of Jordan,\nBid my anxious fears subside:\nBear me through the swelling torrent,\nLand me safe on Canaan's side:\nSongs of praises! Songs of praises!\nI will ever give to Thee.\nSongs of praises! Songs of praises!\nI will ever give to Thee.\n\n4. Saviour, come! We long to see Thee,\nLong to dwell with Thee above;\nAnd to know in full communion,\nAll the sweetness of Thy love\nCome, Lord Jesus! Come, Lord Jesus!\nTake my waiting people home.\nCome, Lord Jesus! Come, Lord Jesus!\nTake my waiting people home.",
 	"text":"William Williams",
 	"music":"John Hughes",
-	"hymnMusic":"assets/audio/Guide-me-O-thou-great-redeemer.mp3",
+	"hymnMusic":"",
 	"hymnTune":"CWM ROHNDDA",
 	"meter":"8.7.8.7.8.7.7."
 	},
@@ -2109,7 +2109,7 @@
 	"music":"Charles C. CONVERSE",
 	"hymnTune":"CONVERSE",
 	"meter":"8.7.8.7.D",
-	"hymnMusic":"assets/audio/What-a-friend-we-have-in-Jesus-What-a-friend.mp3"
+	"hymnMusic":""
 	},
 	{
 	"id":177,
@@ -2241,7 +2241,7 @@
 	"music":"Welsh Hymn Melody",
 	"hymnTune":"JOANNA",
 	"meter":"11.11.11.11",
-	"hymnMusic":"assets/audio/Immortal-Invisible-God-Only-Wise.mp3"
+	"hymnMusic":""
 	},
 	{
 	"id":188,
@@ -2301,7 +2301,7 @@
 	"music":"William H. Doane",
 	"hymnTune":"TO GOD BE THE GLORY",
 	"meter":"11.11.11.11 with Refrain",
-	"hymnMusic":"assets/audio/To-God-Be-The-Glory.mp3"
+	"hymnMusic":""
 	},
 	{
 	"id":193,
@@ -2455,7 +2455,7 @@
 	"text":"Lewis Hensley",
 	"music":"Leighton G. Hayne",
 	"hymnTune":"ST. CECILIA",
-	"hymnMusic":"assets/audio/Thy-kingdom-Come-O-God.mp3",
+	"hymnMusic":"",
 	"meter":"",
 	"key":""
 	},
@@ -2469,7 +2469,7 @@
 	"music":"John Hatton",
 	"hymnTune":"DUKE STREET",
 	"meter":"8.8.8.8. (LM)",
-	"hymnMusic":"assets/audio/Jesus-Shall-Reign-Where-Er-The-Sun.mp3"
+	"hymnMusic":""
 	},
 	{
 	"id":207,
@@ -2529,7 +2529,7 @@
 	"music":"Chester G. Allen",
 	"hymnTune":"JOYFUL SONG",
 	"meter":"Irregular",
-	"hymnMusic":"assets/audio/Praise-Him-Praise-Him-Praise-Him.mp3"
+	"hymnMusic":""
 	},
 	{
 	"id":212,
